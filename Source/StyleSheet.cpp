@@ -15,6 +15,8 @@ namespace juce
 
     void CustomLNF::drawRotarySlider (Graphics& g, int x, int y, int width, int height, float sliderPosProportional, float rotaryStartAngle, float rotaryEndAngle, Slider& slider)
     {
+        
+        
         auto outline = slider.findColour (Slider::rotarySliderOutlineColourId);
         auto fill    = slider.findColour (Slider::rotarySliderFillColourId);
 
@@ -56,13 +58,11 @@ namespace juce
             g.strokePath (valueArc, PathStrokeType (lineW, PathStrokeType::curved, PathStrokeType::rounded));
         }
 
-        // Thumb
-        auto thumbWidth = lineW * 2.0f;
+        // Line
         Point<float> thumbPoint (bounds.getCentreX() + arcRadius * std::cos (toAngle - MathConstants<float>::halfPi),
                                  bounds.getCentreY() + arcRadius * std::sin (toAngle - MathConstants<float>::halfPi));
 
         g.setColour (slider.findColour (Slider::thumbColourId));
-//        g.fillEllipse (Rectangle<float> (thumbWidth, thumbWidth).withCentre (thumbPoint));
         g.drawLine(backgroundArc.getBounds().getCentreX(),
                    backgroundArc.getBounds().getCentreY(),
                    thumbPoint.getX(),
