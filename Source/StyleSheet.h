@@ -12,7 +12,12 @@
 
 #include <JuceHeader.h>
 
-class CustomLNF : public juce::LookAndFeel_V4
+namespace juce
 {
-    // Add methods later
-};
+
+    class CustomLNF : public juce::LookAndFeel_V4
+    {
+        void drawRotarySlider (Graphics&, int x, int y, int width, int height, float sliderPosProportional, float rotaryStartAngle, float rotaryEndAngle, Slider&);
+    };
+
+}
