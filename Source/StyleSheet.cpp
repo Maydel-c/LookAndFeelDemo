@@ -25,6 +25,7 @@ namespace juce
         auto lineW = jmin (8.0f, radius * 0.5f);
         auto arcRadius = radius - lineW * 0.5f;
 
+        // Dial background path
         Path backgroundArc;
         backgroundArc.addCentredArc (bounds.getCentreX(),
                                      bounds.getCentreY(),
@@ -40,6 +41,7 @@ namespace juce
 
         if (slider.isEnabled())
         {
+            // Dial Fill path
             Path valueArc;
             valueArc.addCentredArc (bounds.getCentreX(),
                                     bounds.getCentreY(),
@@ -54,11 +56,17 @@ namespace juce
             g.strokePath (valueArc, PathStrokeType (lineW, PathStrokeType::curved, PathStrokeType::rounded));
         }
 
+        // Thumb
         auto thumbWidth = lineW * 2.0f;
         Point<float> thumbPoint (bounds.getCentreX() + arcRadius * std::cos (toAngle - MathConstants<float>::halfPi),
                                  bounds.getCentreY() + arcRadius * std::sin (toAngle - MathConstants<float>::halfPi));
 
         g.setColour (slider.findColour (Slider::thumbColourId));
-        g.fillEllipse (Rectangle<float> (thumbWidth, thumbWidth).withCentre (thumbPoint));
+//        g.fillEllipse (Rectangle<float> (thumbWidth, thumbWidth).withCentre (thumbPoint));
+        g.drawLine(backgroundArc.getBounds().getCentreX(),
+                   backgroundArc.getBounds().getCentreY(),
+                   thumbPoint.getX(),
+                   thumbPoint.getY(),
+                   lineW);
     }
 };
