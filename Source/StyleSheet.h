@@ -15,4 +15,4 @@
 class CustomLNF : public juce::LookAndFeel_V4
 {
     // Add methods later
-}
+};
