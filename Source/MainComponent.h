@@ -1,7 +1,7 @@
 #pragma once
 
 #include <JuceHeader.h>
-
+#include "StyleSheet.h"
 
 //==============================================================================
 /*
@@ -23,6 +23,7 @@ private:
     //==============================================================================
     // Your private member variables go here...
     
+    CustomLNF myCustomLNF;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

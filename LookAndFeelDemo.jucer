@@ -4,8 +4,8 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
   <MAINGROUP id="dDOMyy" name="LookAndFeelDemo">
     <GROUP id="{3DDCD7F7-AD2D-9AB4-2FBD-2A7171433F22}" name="Source">
-      <FILE id="alGqFC" name="StyleSheet.cpp" compile="1" resource="0" file="Source/StyleSheet.cpp"/>
-      <FILE id="fFkI09" name="StyleSheet.h" compile="0" resource="0" file="Source/StyleSheet.h"/>
+      <FILE id="RZEMtD" name="StyleSheet.cpp" compile="1" resource="0" file="Source/StyleSheet.cpp"/>
+      <FILE id="jqQ5D8" name="StyleSheet.h" compile="0" resource="0" file="Source/StyleSheet.h"/>
       <FILE id="MVMBLo" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="T5pqgk" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="SJpS5u" name="MainComponent.cpp" compile="1" resource="0"

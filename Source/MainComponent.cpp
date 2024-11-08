@@ -3,11 +3,13 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
+    juce::LookAndFeel::setDefaultLookAndFeel(&myCustomLNF);
     setSize (600, 400);
 }
 
 MainComponent::~MainComponent()
 {
+    juce::LookAndFeel::setDefaultLookAndFeel(nullptr);
 }
 
 //==============================================================================
