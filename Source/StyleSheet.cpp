@@ -59,8 +59,8 @@ namespace juce
         }
 
         // Line
-        Point<float> thumbPoint (bounds.getCentreX() + arcRadius * std::cos (toAngle - MathConstants<float>::halfPi),
-                                 bounds.getCentreY() + arcRadius * std::sin (toAngle - MathConstants<float>::halfPi));
+        Point<float> thumbPoint (bounds.getCentreX() + (arcRadius - 10.f) * std::cos (toAngle - MathConstants<float>::halfPi),
+                                 bounds.getCentreY() + (arcRadius - 10.f) * std::sin (toAngle - MathConstants<float>::halfPi));
 
         g.setColour (slider.findColour (Slider::thumbColourId));
         g.drawLine(backgroundArc.getBounds().getCentreX(),

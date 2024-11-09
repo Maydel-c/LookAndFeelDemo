@@ -14,6 +14,8 @@ MainComponent::MainComponent()
     mySlider.setRange(0.0f, 100.f);
     mySlider.setValue(25.0f);
     mySlider.setTextBoxStyle(juce::Slider::NoTextBox, true, 100, 25);
+    mySlider.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::orange);
+    mySlider.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orange);
     addAndMakeVisible(mySlider);
     
     setSize (400, 400);
