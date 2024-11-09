@@ -5,17 +5,6 @@ MainComponent::MainComponent()
 {
     juce::LookAndFeel::setDefaultLookAndFeel(&myCustomLNF);
     
-    auto rotaryParams = mySlider.getRotaryParameters();
-    rotaryParams.startAngleRadians = juce::MathConstants<float>::pi * 1.5f;
-    rotaryParams.endAngleRadians = juce::MathConstants<float>::pi * 3.f;
-    mySlider.setRotaryParameters(rotaryParams);
-    
-    mySlider.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
-    mySlider.setRange(0.0f, 100.f);
-    mySlider.setValue(25.0f);
-    mySlider.setTextBoxStyle(juce::Slider::NoTextBox, true, 100, 25);
-    mySlider.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::orange);
-    mySlider.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orange);
     addAndMakeVisible(mySlider);
     
     setSize (400, 400);
